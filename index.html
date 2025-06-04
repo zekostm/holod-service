@@ -11,17 +11,20 @@
     .contact { font-size: 18px; margin-top: 5px; }
     .hero { text-align: center; padding: 40px 20px; background: #e0ecff; }
     .hero h2 { font-size: 28px; margin-bottom: 20px; }
-    .buttons { margin-top: 20px; }
+    .buttons { margin-top: 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
     .buttons a {
       display: inline-flex; align-items: center; gap: 8px;
-      margin: 10px; padding: 12px 20px; background: #007bff; color: white; text-decoration: none;
+      padding: 12px 20px; background: #007bff; color: white; text-decoration: none;
       border-radius: 8px; font-size: 16px;
     }
     .buttons a img { width: 20px; height: 20px; }
     .buttons a:hover { background: #0056b3; }
     .features { padding: 30px 20px; display: grid; gap: 20px; max-width: 800px; margin: auto; }
-    .feature { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: flex; gap: 15px; align-items: flex-start; }
-    .feature-icon { font-size: 24px; margin-top: 4px; color: #007bff; }
+    .feature {
+      background: white; padding: 20px; border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: flex; gap: 15px;
+    }
+    .feature img { width: 40px; height: 40px; }
     .callback-form { background: white; padding: 30px; max-width: 500px; margin: 30px auto; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
     .callback-form h3 { margin-top: 0; }
     .callback-form input, .callback-form button {
@@ -34,48 +37,66 @@
 <body>
   <header>
     <h1>Холод Сервис Про</h1>
-    <div class="contact">📞 +7 904 218 15 55</div>
+    <div class="contact">+7 904 218-15-55</div>
   </header>
-
   <section class="hero">
     <h2>Ремонт холодильников на дому</h2>
     <div class="buttons">
-      <a href="https://t.me/karabarass" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram"> Telegram</a>
-      <a href="https://signal.me/#eu/FLZIEhkVbzKef33Z2bfHEkx6yed9pBO_XH8IX3h2RkkGGaS7QhZLnJIpsyWinv80" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Signal-Logo.svg" alt="Signal"> Signal</a>
+      <a href="tel:+79042181555"><img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Позвонить"/>Позвонить</a>
+      <a href="https://t.me/karabarass"><img src="https://img.icons8.com/ios-filled/50/ffffff/telegram-app.png" alt="Telegram"/>Telegram</a>
+      <a href="https://signal.me/#eu/FLZIEhkVbzKef33Z2bfHEkx6yed9pBO_XH8IX3h2RkkGGaS7QhZLnJIpsyWinv80"><img src="https://img.icons8.com/ios-filled/50/ffffff/signal-app.png" alt="Signal"/>Signal</a>
+      <a href="https://wa.me/79042181555"><img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp"/>WhatsApp</a>
     </div>
   </section>
-
   <section class="features">
-    <div class="feature"><div class="feature-icon">🏠</div><div>Ремонт на дому — без необходимости везти холодильник в сервис.</div></div>
-    <div class="feature"><div class="feature-icon">🚗</div><div>Быстрый выезд мастера — прибытие специалиста уже в день обращения.</div></div>
-    <div class="feature"><div class="feature-icon">🔍</div><div>Бесплатная диагностика — при последующем ремонте.</div></div>
-    <div class="feature"><div class="feature-icon">🧰</div><div>Опыт более 10 лет — мастера с большим стажем работы.</div></div>
-    <div class="feature"><div class="feature-icon">🛡️</div><div>Гарантия до 12 месяцев — на все виды работ и заменённые детали.</div></div>
-    <div class="feature"><div class="feature-icon">⚙️</div><div>Оригинальные запчасти — только проверенные комплектующие.</div></div>
-    <div class="feature"><div class="feature-icon">💰</div><div>Честные цены — прозрачная смета до начала ремонта.</div></div>
-    <div class="feature"><div class="feature-icon">📦</div><div>Ремонт любых брендов — от старых моделей до современных инверторных.</div></div>
-    <div class="feature"><div class="feature-icon">🤝</div><div>Аккуратность и вежливость — чистота после ремонта и уважение к клиенту.</div></div>
+    <div class="feature">
+      <img src="https://img.icons8.com/ios-filled/50/toolbox.png" alt="Ремонт"/>
+      <div>Ремонт на дому — без необходимости везти холодильник в сервис.</div>
+    </div>
+    <div class="feature">
+      <img src="https://img.icons8.com/ios-filled/50/checked--v1.png" alt="Гарантия"/>
+      <div>Гарантия до 12 месяцев — на все виды работ и заменённые детали.</div>
+    </div>
+    <div class="feature">
+      <img src="https://img.icons8.com/ios-filled/50/settings.png" alt="Диагностика"/>
+      <div>Бесплатная диагностика — при последующем ремонте.</div>
+    </div>
+    <div class="feature">
+      <img src="https://img.icons8.com/ios-filled/50/classroom.png" alt="Опыт"/>
+      <div>Опыт более 10 лет — мастера с большим стажем работы.</div>
+    </div>
+    <div class="feature">
+      <img src="https://img.icons8.com/ios-filled/50/microchip.png" alt="Запчасти"/>
+      <div>Оригинальные запчасти — только проверенные комплектующие.</div>
+    </div>
+    <div class="feature">
+      <img src="https://img.icons8.com/ios-filled/50/appliances.png" alt="Бренды"/>
+      <div>Ремонт любых брендов — от старых моделей до современных инверторных.</div>
+    </div>
+    <div class="feature">
+      <img src="https://img.icons8.com/ios-filled/50/customer-support.png" alt="Обслуживание"/>
+      <div>Аккуратность и вежливость — чистота после ремонта и уважение к клиенту.</div>
+    </div>
   </section>
-
   <section class="callback-form">
-    <h3>Обратная связь</h3>
-    <form id="callbackForm">
-      <input type="text" id="name" placeholder="Ваше имя" required />
-      <input type="tel" id="phone" placeholder="Телефон" required />
-      <button type="submit">Отправить заявку</button>
+    <h3>Оставьте заявку</h3>
+    <form id="contactForm">
+      <input type="text" id="name" name="name" placeholder="Ваше имя" required />
+      <input type="tel" id="phone" name="phone" placeholder="Телефон" required />
+      <button type="submit">Отправить</button>
     </form>
   </section>
-
   <script>
-    document.getElementById('callbackForm').addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const name = document.getElementById('name').value;
-      const phone = document.getElementById('phone').value;
-      const msg = `Заявка с сайта%0AИмя: ${name}%0AТелефон: ${phone}`;
-      const url = `https://api.telegram.org/bot8072431270:AAGhzEfQE6yB35VzqKqt_BBvd5I_jk1HTDQ/sendMessage?chat_id=7581871965&text=${msg}`;
-      await fetch(url);
-      alert('Заявка отправлена!');
-      this.reset();
+    document.getElementById("contactForm").addEventListener("submit", async function(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const text = `Заявка с сайта:%0AИмя: ${name}%0AТелефон: ${phone}`;
+      const chatId = '7581871965';
+      const token = '8072431270:AAGhzEfQE6yB35VzqKqt_BBvd5I_jk1HTDQ'; // замените на ваш токен
+      fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${text}`)
+        .then(response => alert('Заявка отправлена!'))
+        .catch(error => alert('Ошибка отправки'));
     });
   </script>
 </body>
