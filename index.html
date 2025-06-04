@@ -5,27 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Холод Сервис Про</title>
   <style>
+    * { box-sizing: border-box; }
     body {
-      font-family: sans-serif;
-      background: #f5f5f5;
-      padding: 2rem;
-      max-width: 600px;
-      margin: auto;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
     }
-    h1 {
-      color: #004080;
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 1rem;
+      text-align: center;
     }
-    form {
-      background: #fff;
-      padding: 1.5rem;
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: white;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+    h2 {
+      color: #007bff;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
     input, button {
-      width: 100%;
       margin: 0.5rem 0;
       padding: 0.75rem;
       font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
     button {
       background-color: #007bff;
@@ -36,19 +53,40 @@
     button:hover {
       background-color: #0056b3;
     }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      background: #e9ecef;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
-  <h1>Ремонт холодильников в Липецке</h1>
-  <p><strong>Холод Сервис Про</strong></p>
-  <p>Телефон: <a href="tel:+79995304411">+7 (999) 530-44-11</a></p>
+  <header>
+    <h1>РЕМОНТ ХОЛОДИЛЬНИКОВ В ЛИПЕЦКЕ НА ДОМУ</h1>
+    <p>Холод Сервис Про</p>
+    <p><a href="tel:+79995304411">+7 (999) 530-44-11</a> | <a href="https://t.me/+79995304411">Telegram</a> | <a href="https://wa.me/79995304411">WhatsApp</a></p>
+  </header>
 
-  <h2>Заказать обратный звонок</h2>
-  <form>
-    <input type="text" name="name" placeholder="Ваше имя" required />
-    <input type="tel" name="phone" placeholder="Ваш телефон" required />
-    <button type="submit">Перезвоните мне</button>
-  </form>
+  <div class="container">
+    <h2>Оказываем услуги по ремонту холодильников</h2>
+    <p>Выезд на дом по Липецку. Бесплатная диагностика при ремонте. Гарантия. Опыт более 10 лет.</p>
+
+    <h2>Заказать обратный звонок</h2>
+    <form>
+      <input type="text" name="name" placeholder="Ваше имя" required />
+      <input type="tel" name="phone" placeholder="Ваш телефон" required />
+      <button type="submit">Перезвоните мне</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Холод Сервис Про. Все права защищены.</p>
+  </footer>
 
   <script>
     document.querySelector('form').addEventListener('submit', function (e) {
@@ -59,7 +97,7 @@
 
       if (!name || !phone) return;
 
-      const token = '8072431270:AAGhzEfQE6yB35VzqKqt_BBvd5I_jk1HTDQ'; // Заменить!
+      const token = '8072431270:AAGhzEfQE6yB35VzqKqt_BBvd5I_jk1HTDQ'; // ВСТАВЬ сюда свой Telegram bot token
       const chat_id = '7581871965';
       const text = `🔧 Новая заявка с сайта:\n👤 Имя: ${name}\n📞 Телефон: ${phone}`;
 
