@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Холод Сервис Про</title>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <style>
     body { font-family: sans-serif; margin: 0; background: #f5f5f5; color: #222; }
     header { background: #004080; color: white; padding: 20px; text-align: center; }
@@ -46,44 +45,43 @@
   </section>
   <section class="callback-form">
     <h3>Оставьте заявку на обратный звонок</h3>
-    <form id="callbackForm">
+    <form>
       <input type="text" name="name" placeholder="Ваше имя" required />
       <input type="tel" name="phone" placeholder="Ваш телефон" required />
-      <div class="g-recaptcha" data-sitekey="6Lfe81UrAAAAAGIR7mFsJ_P10OQRrGtQu1d7U8Hi"></div>
       <button type="submit">Перезвоните мне</button>
     </form>
   </section>
   <footer>
     &copy; 2025 Холод Сервис Про — Все права защищены. Политика конфиденциальности.
   </footer>
-
   <script>
-    document.getElementById("callbackForm").addEventListener("submit", async function(e) {
+    document.querySelector('form').addEventListener('submit', function (e) {
       e.preventDefault();
 
       const name = this.name.value.trim();
       const phone = this.phone.value.trim();
-      const recaptchaResponse = grecaptcha.getResponse();
 
-      if (!recaptchaResponse) {
-        alert("Пожалуйста, подтвердите, что вы не робот.");
-        return;
-      }
+      if (!name || !phone) return;
 
-      const message = `📩 Новая заявка:\n👤 Имя: ${name}\n📞 Телефон: ${phone}`;
+      const token = '8072431270:AAGhzEfQE6yB35VzqKqt_BBvd5I_jk1HTDQ'; // Замени на свой Telegram bot token
+      const chat_id = '7581871965';
+      const text = `🔧 Новая заявка с сайта:ask2me.ru👤 Имя: ${name}\n📞 Телефон: ${phone}`;
 
-      await fetch("https://api.telegram.org/bot8072431270:AAGhzEfQE6yB35VzqKqt_BBvd5I_jk1HTDQ/sendMessage", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
         body: JSON.stringify({
-          chat_id: 7581871965,
-          text: message
+          chat_id: chat_id,
+          text: text
         })
+      }).then(() => {
+        alert('Заявка отправлена!');
+        this.reset();
+      }).catch(() => {
+        alert('Ошибка при отправке. Попробуйте позже.');
       });
-
-      alert("Заявка отправлена!");
-      this.reset();
-      grecaptcha.reset();
     });
   </script>
 </body>
