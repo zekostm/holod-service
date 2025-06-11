@@ -4,7 +4,7 @@
   <meta name="yandex-verification" content="22f0e900879f35cf" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ремонт холодильников в Липецке на дому от Холод Сервис Про </title>
+  <title>Ремонт холодильников в Липецке на дому от Холод Сервис Про</title>
   <style>
     body { font-family: sans-serif; margin: 0; background: #f5f5f5; color: #222; }
     header { background: #004080; color: white; padding: 20px; text-align: center; }
@@ -25,17 +25,6 @@
       background: white; padding: 20px; border-radius: 12px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    .callback-form {
-      background: white; padding: 30px; max-width: 500px; margin: 30px auto;
-      border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .callback-form h3 { margin-top: 0; }
-    .callback-form input, .callback-form button {
-      width: 100%; padding: 12px; margin: 10px 0; font-size: 16px;
-      border-radius: 8px; border: 1px solid #ccc;
-    }
-    .callback-form button { background: #007bff; color: white; border: none; }
-    .callback-form button:hover { background: #0056b3; }
   </style>
 </head>
 <body>
@@ -47,68 +36,32 @@
   <section class="hero">
     <h2>Ремонт холодильников в Липецке на дому</h2>
     <div class="buttons">
-  <a href="tel:+79042181555">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Phone" />
-    Позвонить
-  </a>
-  <a href="https://wa.me/79042181555">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" />
-    WhatsApp
-  </a>
-  <a href="https://t.me/karabarass">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/telegram.png" alt="Telegram" />
-    Telegram
-  </a>
-  <a href="https://signal.me/#eu/FLZIEhkVbzKef33Z2bfHEkx6yed9pBO_XH8IX3h2RkkGGaS7QhZLnJIpsyWinv80">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/signal-app.png" alt="Signal" />
-    Signal
-  </a>
-</div>
-
+      <a href="tel:+79042181555">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Phone" />
+        Позвонить
+      </a>
+      <a href="https://wa.me/79042181555">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" />
+        WhatsApp
+      </a>
+      <a href="https://t.me/karabarass">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/telegram.png" alt="Telegram" />
+        Telegram
+      </a>
+      <a href="https://signal.me/#eu/FLZIEhkVbzKef33Z2bfHEkx6yed9pBO_XH8IX3h2RkkGGaS7QhZLnJIpsyWinv80">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/signal-app.png" alt="Signal" />
+        Signal
+      </a>
+    </div>
   </section>
 
   <section class="features">
     <div class="feature">Ремонт на дому — без необходимости везти холодильник в сервис.</div> 
-    <div class="feature">Узкая специализация - ремонтируем только бытовые холодильники! (никаких кофеварок, стиралок, микроволновок)</div>
-    <div class="feature">Гарантия на выполненные работы</div>
+    <div class="feature">Узкая специализация — ремонтируем только бытовые холодильники! (никаких кофеварок, стиралок, микроволновок)</div>
+    <div class="feature">Гарантия на выполненные работы.</div>
     <div class="feature">Ремонт любых брендов — от старых моделей до современных инверторных.</div>
-    <div class="feature">Аккуратность и вежливость — чистота после ремонта и уважение к клиенту</div>
-    <div class="feature">Выезд в область обговаривается индивидуально</div>
-    
+    <div class="feature">Аккуратность и вежливость — чистота после ремонта и уважение к клиенту.</div>
+    <div class="feature">Выезд в область обговаривается индивидуально.</div>
   </section>
-
-  <section class="callback-form">
-    <h3>Обратная связь</h3>
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Ваше имя" required>
-      <input type="tel" id="phone" placeholder="Телефон" required>
-      <button type="submit">Отправить</button>
-    </form>
-    <div id="formStatus"></div>
-  </section>
-
-  <script>
-    const TOKEN = '8072431270:AAGhzEfQE6yB35VzqKqt_BBvd5I_jk1HTDQ'; // Заменить на реальный токен
-    const CHAT_ID = 7581871965;
-
-    document.getElementById('contactForm').addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const name = document.getElementById('name').value;
-      const phone = document.getElementById('phone').value;
-      const message = `Заявка с сайта:%0AИмя: ${name}%0AТелефон: ${phone}`;
-
-      const response = await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${message}`);
-      const statusDiv = document.getElementById('formStatus');
-
-      if (response.ok) {
-        statusDiv.textContent = 'Заявка отправлена!';
-        statusDiv.style.color = 'green';
-        document.getElementById('contactForm').reset();
-      } else {
-        statusDiv.textContent = 'Ошибка при отправке.';
-        statusDiv.style.color = 'red';
-      }
-    });
-  </script>
 </body>
 </html>
